@@ -58,13 +58,6 @@ public class Main {
 
     private static boolean chechWin(char symbol) {
 
-        //if (map[0][0] == symbol && map[0][1] == symbol && map[0][2] ==symbol) return true;
-        //if (map[1][0] == symbol && map[1][1] == symbol && map[1][2] ==symbol) return true;
-        //if (map[2][0] == symbol && map[2][1] == symbol && map[2][2] ==symbol) return true;
-
-       // if (map[0][0] == symbol && map[1][0] == symbol && map[2][0] ==symbol) return true;
-       // if (map[0][1] == symbol && map[1][1] == symbol && map[2][1] ==symbol) return true;
-       // if (map[0][2] == symbol && map[1][2] == symbol && map[2][2] ==symbol) return true;
         int countLine =0;
         int countVertical =0;
         for (int i = 0; i < map.length; i++) {
@@ -78,7 +71,9 @@ public class Main {
 
         }
         int countSlashRigth = 0;
+
         int countSlashLeft = 0;
+
         for (int h = 0; h < map.length;h++)
         {
                if (map[h][h] == symbol) countSlashRigth++;
@@ -87,9 +82,6 @@ public class Main {
 
 
         }
-
-        //if (map[0][0] == symbol && map[1][1] == symbol && map[2][2] ==symbol) return true;
-       // if (map[0][2] == symbol && map[1][1] == symbol && map[2][0] ==symbol) return true;
 
         return false;
     }
